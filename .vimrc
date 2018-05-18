@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Valloric/YouCompleteMe', { 'do' : './install.py' }
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
+Plug 'liuchengxu/space-vim-dark'
 
 " Initialize plugin system
 call plug#end()
@@ -20,11 +21,14 @@ set softtabstop=4 " Edit as if the tabs are 4 characters wide.
 set shiftwidth=4 " Number of spaces to use for indent and unindent.
 set shiftround " Round indent to a multiple of 'shiftwidth'.
 
+"Color and themes
+colorscheme space-vim-dark
 
 " Appearance
 set number " Show line numbers.
 
- 
+" Remap keys
+
 " Openning NERDTree automatically when Neovim starts.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
