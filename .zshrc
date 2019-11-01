@@ -120,3 +120,8 @@ function testwatch {
 
 [[ $TERM != "screen" ]] && exec tmux
 alias config='/usr/bin/git --git-dir=/Users/josemiguelq/.cfg/ --work-tree=/Users/josemiguelq'
+
+
+function dRemoveAllIamges() {
+     docker rmi -f $(docker images -a -q)
+}
